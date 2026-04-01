@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ZamTrips - Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        /* Navbar styling */
+        .navbar {
+            background-color: #2a7ae2;
+        }
+        .navbar-brand, .nav-link {
+            color: white !important;
+            font-weight: bold;
+        }
+        .nav-link:hover {
+            color: #ffdd57 !important;
+        }
+
+        /* Hero section */
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(rgba(42,122,226,0.8), rgba(42,122,226,0.8)), url('https://source.unsplash.com/1600x600/?safari,africa') no-repeat center center;
+            background-size: cover;
+            color: white;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        .hero p {
+            font-size: 1.2rem;
+        }
+
+        /* Booking form */
+        .booking-form {
+            max-width: 700px;
+            margin: 40px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        .booking-form .form-control {
+            margin-bottom: 15px;
+            border-radius: 8px;
+        }
+        .booking-form button {
+            background-color: #2a7ae2;
+            color: white;
+            font-weight: bold;
+        }
+        .booking-form button:hover {
+            background-color: #1b5bbf;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            background-color: #2a7ae2;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/">ZamTrips</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/bookings">View Bookings</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Explore Zambia Like Never Before</h1>
+        <p>Book your dream safari or adventure trip in just a few clicks!</p>
+        <a href="#booking" class="btn btn-warning btn-lg mt-3"><i class="fas fa-plane"></i> Book Now</a>
+    </section>
+
+    <!-- Booking Form -->
+    <section id="booking" class="booking-form">
+        <h2 class="text-center mb-4">Book Your Trip</h2>
+        <form action="/submit-booking" method="POST">
+            <div class="input-group">
+                <span class="input-group-text"><i class="fas fa-user"></i></span>
+                <input type="text" name="name" class="form-control" placeholder="Full Name" required>
+            </div>
+            <div class="input-group">
+                <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                <input type="email" name="email" class="form-control" placeholder="Email Address" required>
+            </div>
+            <div class="input-group">
+                <span class="input-group-text"><i class="fas fa-map-marker-alt"></i></span>
+                <input type="text" name="destination" class="form-control" placeholder="Destination" required>
+            </div>
+            <div class="input-group">
+                <span class="input-group-text"><i class="fas fa-calendar-alt"></i></span>
+                <input type="date" name="date" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-block mt-3"><i class="fas fa-check-circle"></i> Confirm Booking</button>
+        </form>
+    </section>
+
+    <footer>
+        &copy; 2026 ZamTrips. All rights reserved.
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

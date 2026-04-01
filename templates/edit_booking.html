@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Edit Booking</h2>
+
+<form method="POST" action="/update/{{ booking.id }}">
+<input name="name" value="{{ booking.name }}"><br><br>
+<input name="email" value="{{ booking.email }}"><br><br>
+<input name="destination" value="{{ booking.destination }}"><br><br>
+<input type="date" name="date" value="{{ booking.date }}"><br><br>
+<button>Update</button>
+</form>
+
+</body>
+</html>

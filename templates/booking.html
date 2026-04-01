@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>New Booking - ZamTrips</title>
+    <style>
+        body { font-family: Arial; background-color: #f4f6f9; margin: 20px; }
+        h1 { color: #2a7ae2; }
+        form { background: white; padding: 20px; border-radius: 8px; width: 400px; }
+        label { display: block; margin-top: 10px; }
+        input, select { width: 100%; padding: 8px; margin-top: 5px; }
+        button { margin-top: 15px; padding: 10px; background: #2a7ae2; color: white; border: none; border-radius: 5px; cursor: pointer; }
+        .back { margin-top: 10px; display: inline-block; color: #2a7ae2; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<h1>New Booking</h1>
+
+<form method="POST" action="{{ url_for('submit_booking') }}">
+    <label>Name</label>
+    <input type="text" name="name" required>
+
+    <label>Email</label>
+    <input type="email" name="email" required>
+
+    <label>Destination</label>
+    <input type="text" name="destination" required>
+
+    <label>Date</label>
+    <input type="date" name="date" required>
+
+    <label>Status</label>
+    <select name="status">
+        <option value="Pending">Pending</option>
+        <option value="Confirmed">Confirmed</option>
+        <option value="Cancelled">Cancelled</option>
+    </select>
+
+    <button type="submit">Submit Booking</button>
+</form>
+
+<a class="back" href="/">⬅ Back to Home</a>
+
+</body>
+</html>
